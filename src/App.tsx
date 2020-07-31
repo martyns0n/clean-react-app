@@ -1,17 +1,9 @@
 import React, { useState } from "react";
 import Row from "./Row"
-
-const defaultValue = (index: number) => ({
-  value: Math.round(Math.random() * 1000),
-  label: `label ${index + 1}`
-});
-
-const defaultState = Array.from({ length: 200 }, (_el, index: number) =>
-  defaultValue(index)
-);
+import data from "./data"
 
 const App = () => {
-  const [list, setList] = useState(defaultState);
+  const [list, setList] = useState(data);
 
   const handleUpdate = () => {
     const [el, ...rest] = list;
