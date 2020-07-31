@@ -12,7 +12,7 @@ interface Data {
 
 const Row = ({ data }: Props) => {
   const { value } = data;
-  const newValue = useMemo(() => Math.round(Math.random() * 1000), []);
+  const newValue = useMemo(() => Math.round(Math.random() * 1000), [value]);
   const newString = `label: ${value} / ${newValue}`;
 
   return (
